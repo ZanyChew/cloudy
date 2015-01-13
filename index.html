@@ -67,11 +67,11 @@
 				  });
 				  myDataRef.on('child_added', function(snapshot) {
 					var message = snapshot.val();
-					displayChatMessage("Admin", "Please rate IS429 from 1-10");
 					displayChatMessage(message.name, message.text);
 				  });
 				  function displayChatMessage(name, text) {
 					$('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+					$('<div/>').text("Please rate IS429").prepend($('<em/>').text("Admin"+': ')).appendTo($('#messagesDiv'));
 					$('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
 				  };
 				</script>
